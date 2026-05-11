@@ -1,0 +1,97 @@
+const mainLocations = [
+    {
+    id: '01',
+    title: 'ExploraScience Quy Nhon',
+    desc: 'Trung tâm khám phá khoa học vũ trụ và đài thiên văn đại chúng đầu tiên tại Việt Nam.',
+    fullDesc: 'Tổ hợp không gian khoa học bao gồm nhà chiếu hình vũ trụ, đài quan sát thiên văn và các phòng trưng bày tương tác. Nơi đây mang đến trải nghiệm du hành không gian chân thực, khơi dậy niềm đam mê khoa học cho mọi lứa tuổi thông qua các mô hình thực tế ảo và thiết bị tối tân.',
+    location: 'Đại lộ Khoa học, Ghềnh Ráng',
+    distance: '7 km từ trung tâm',
+    time: '08: 00 - 17: 00 (Thứ 3 - Chủ Nhật)',
+    ticket: '120.000 VNĐ / Người',
+    tags: ['Thiên văn học', 'Triển lãm'
+        ],
+    image: 'https: //images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=1000',
+    },
+    {
+    id: '02',
+    title: 'ICISE',
+    desc: 'Trung tâm Quốc tế Khoa học và Giáo dục Liên ngành, nơi hội tụ của các nhà khoa học đạt giải Nobel.',
+    fullDesc: 'Ẩn mình trong thung lũng Quy Hòa tuyệt đẹp, ICISE là điểm hẹn của trí tuệ toàn cầu. Nơi đây thường xuyên tổ chức các hội nghị vật lý, toán học và sinh học quốc tế, kết nối các nhà khoa học trẻ Việt Nam với những khối óc vĩ đại nhất thế giới.',
+    location: 'Thung lũng Quy Hòa',
+    distance: '8 km từ trung tâm',
+    time: '07: 30 - 16: 30 (Cần đặt lịch trước)',
+    ticket: 'Dành cho hội nghị / Miễn phí tham quan ngoài',
+    tags: ['Nghiên cứu', 'Hội nghị'
+        ],
+    image: 'https: //images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000',
+    },
+    {
+    id: '03',
+    title: 'Ocean Observatory',
+    desc: 'Trạm quan sát đại dương và hệ sinh thái biển sâu với công nghệ AI tiên tiến.',
+    fullDesc: 'Một cơ sở nghiên cứu hải dương học hiện đại, tập trung vào việc giám sát rạn san hô, dòng chảy đại dương và đa dạng sinh học biển. Trạm sử dụng hệ thống camera ngầm và AI để phân tích dữ liệu theo thời gian thực, phục vụ cho bảo tồn thiên nhiên.',
+    location: 'Bờ biển Quy Nhơn',
+    distance: '2 km từ trung tâm',
+    time: '09: 00 - 18: 00 (Hàng ngày)',
+    ticket: '80.000 VNĐ / Người',
+    tags: ['Hải dương học', 'AI'
+        ],
+    image: 'https: //images.unsplash.com/photo-1518021287102-3c87e41662fb?auto=format&fit=crop&q=80&w=1000',
+    }
+];
+
+// 2. DỮ LIỆU CÁC ĐIỂM PHỤ (Vệ tinh xung quanh)
+const subLocations = [
+    {
+    id: '04',
+    title: 'TMA Innovation Park',
+    desc: 'Công viên sáng tạo phần mềm và trí tuệ nhân tạo.',
+    fullDesc: 'Trung tâm nghiên cứu và phát triển phần mềm quy mô lớn, tập trung vào Data Science, AI và IoT.',
+    location: 'Khu Đô thị Khoa học Quy Hòa',
+    distance: '9 km từ trung tâm',
+    time: 'Giờ hành chính',
+    ticket: 'Nội bộ',
+    tags: ['IT', 'Data Science'
+        ],
+    image: 'https: //images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000',
+    },
+    {
+    id: '05',
+    title: 'Quy Nhon AI Center',
+    desc: 'Trung tâm Nghiên cứu & Ứng dụng Trí tuệ Nhân tạo FPT.',
+    fullDesc: 'Đóng vai trò hạt nhân trong việc định hướng Quy Nhơn thành trung tâm AI của khu vực Đông Nam Á.',
+    location: 'Trung tâm TP Quy Nhơn',
+    distance: '1 km từ trung tâm',
+    time: '08: 00 - 17: 00',
+    ticket: 'Nội bộ',
+    tags: ['AI', 'Tech'
+        ],
+    image: 'https: //images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
+    },
+    {
+    id: '06',
+    title: 'Marine Biology Station',
+    desc: 'Trạm thực địa sinh học biển trực thuộc Đại học Quy Nhơn.',
+    fullDesc: 'Nơi nghiên cứu về sinh lý, sinh thái các loài thủy sản và tảo biển khu vực duyên hải miền Trung.',
+    location: 'Bán đảo Phương Mai',
+    distance: '15 km từ trung tâm',
+    time: 'Theo lịch nghiên cứu',
+    ticket: 'Liên hệ trước',
+    tags: ['Sinh học', 'Thực địa'
+        ],
+    image: 'https: //images.unsplash.com/photo-1582967261453-339cbfa75c6d?auto=format&fit=crop&q=80&w=1000',
+    },
+    {
+    id: '06',
+    title: 'Marine Biology Station',
+    desc: 'Trạm thực địa sinh học biển trực thuộc Đại học Quy Nhơn.',
+    fullDesc: 'Nơi nghiên cứu về sinh lý, sinh thái các loài thủy sản và tảo biển khu vực duyên hải miền Trung.',
+    location: 'Bán đảo Phương Mai',
+    distance: '15 km từ trung tâm',
+    time: 'Theo lịch nghiên cứu',
+    ticket: 'Liên hệ trước',
+    tags: ['Sinh học', 'Thực địa'
+        ],
+    image: 'https: //images.unsplash.com/photo-1582967261453-339cbfa75c6d?auto=format&fit=crop&q=80&w=1000',
+    }
+];
