@@ -31,7 +31,7 @@ const scienceThemes = [
                     { label: 'Gói Research Retreat', icon: <Sparkles className="w-4 h-4" /> }
                 ],
                 location: 'Thung lũng Quy Hòa',
-                image: '/asset/1.jpg'
+                image: 'https://fxbvmbd9zkjubuwr.public.blob.vercel-storage.com/1.jpg'
             },
             {
                 id: '02',
@@ -51,7 +51,7 @@ const scienceThemes = [
                     { label: 'Thẻ Young Scientist Pass', icon: <Star className="w-4 h-4" /> }
                 ],
                 location: 'Đại lộ Khoa học',
-                image: '/asset/2.jpg'
+                image: 'https://fxbvmbd9zkjubuwr.public.blob.vercel-storage.com/2.jpg'
             },
             {
                 id: '03',
@@ -71,7 +71,7 @@ const scienceThemes = [
                     { label: 'Khám phá Trạm dữ liệu', icon: <Microscope className="w-4 h-4" /> }
                 ],
                 location: 'Đại lộ Khoa học',
-                image: '/asset/3.png'
+                image: 'https://fxbvmbd9zkjubuwr.public.blob.vercel-storage.com/3.png'
             },
 
         ]
@@ -101,7 +101,7 @@ const scienceThemes = [
                     { label: 'Dịch vụ Silent Transfer', icon: <Compass className="w-4 h-4" /> },
                 ],
                 location: 'Bán đảo Phương Mai',
-                image: '/asset/4.jpg'
+                image: 'https://fxbvmbd9zkjubuwr.public.blob.vercel-storage.com/4.jpg'
             },
             {
                 id: '05',
@@ -120,7 +120,7 @@ const scienceThemes = [
                     { label: 'Tham gia Walking Tour', icon: <Navigation className="w-4 h-4" /> },
                 ],
                 location: 'Nhơn Lý, Quy Nhơn',
-                image: '/asset/5.png'
+                image: 'https://fxbvmbd9zkjubuwr.public.blob.vercel-storage.com/5.png'
             },
             {
                 id: '06',
@@ -140,7 +140,7 @@ const scienceThemes = [
                     { label: 'Đặt chỗ Eco-Lodge', icon: <Star className="w-4 h-4" /> }
                 ],
                 location: 'Xã đảo Nhơn Châu',
-                image: '/asset/6.jpg'
+                image: 'https://fxbvmbd9zkjubuwr.public.blob.vercel-storage.com/6.jpg'
             },
             {
                 id: '07',
@@ -160,7 +160,7 @@ const scienceThemes = [
                     { label: 'Cẩm nang Sinh vật', icon: <BookOpen className="w-4 h-4" /> }
                 ],
                 location: 'Quy Nhơn - Tuy Phước',
-                image: '/asset/7.jpg'
+                image: 'https://fxbvmbd9zkjubuwr.public.blob.vercel-storage.com/7.jpg'
             },
         ]
     },
@@ -190,7 +190,7 @@ const scienceThemes = [
                     { label: 'Mô hình 3D Tháp Bánh Ít', icon: <Landmark className="w-4 h-4" /> }
                 ],
                 location: 'Quy Nhơn - Tuy Phước',
-                image: '/asset/8.jpg'
+                image: 'https://fxbvmbd9zkjubuwr.public.blob.vercel-storage.com/8.jpg'
             },
             {
                 id: '09',
@@ -210,7 +210,7 @@ const scienceThemes = [
                     { label: 'Đối thoại cùng Nghệ nhân', icon: <Users className="w-4 h-4" /> },
                 ],
                 location: 'An Nhơn - Tây Sơn',
-                image: '/asset/9.jpg'
+                image: 'https://fxbvmbd9zkjubuwr.public.blob.vercel-storage.com/9.jpg'
             },
             {
                 id: '10',
@@ -230,7 +230,7 @@ const scienceThemes = [
                     { label: 'Tham vấn Y thuật cổ truyền', icon: <Info className="w-4 h-4" /> }
                 ],
                 location: 'Tây Sơn, Bình Định',
-                image: '/asset/10.jpg'
+                image: 'https://fxbvmbd9zkjubuwr.public.blob.vercel-storage.com/10.jpg'
             },
         ]
     },
@@ -259,7 +259,7 @@ const scienceThemes = [
                     { label: 'Sự kiện Sunset Networking', icon: <Users className="w-4 h-4" /> },
                 ],
                 location: 'Xuân Diệu, Quy Nhơn',
-                image: '/asset/11.jpg'
+                image: 'https://fxbvmbd9zkjubuwr.public.blob.vercel-storage.com/11.jpg'
             },
             {
                 id: '12',
@@ -278,7 +278,7 @@ const scienceThemes = [
                     { label: 'Gợi ý Đặc sản', icon: <ShoppingBag className="w-4 h-4" /> },
                 ],
                 location: 'Lê Duẩn, Quy Nhơn',
-                image: '/asset/12.jpg'
+                image: 'https://fxbvmbd9zkjubuwr.public.blob.vercel-storage.com/12.jpg'
             },
         ]
     }
