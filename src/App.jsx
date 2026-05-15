@@ -12,7 +12,6 @@ import Programs from './components/features/Programs';
 
 export default function App() {
   const [activeNav, setActiveNav] = useState('Home');
-<<<<<<< HEAD
   // State mới để điều khiển sự xuất hiện của Navbar
   const [showNavbar, setShowNavbar] = useState(true);
 
@@ -32,21 +31,7 @@ export default function App() {
             onKnowledgeHub={() => setActiveNav('Knowledge Hub')}
           />
         );
-=======
 
-  const renderContent = () => {
-    switch (activeNav) {
-      case 'Science Route': return <ScienceRoute />;
-      case 'Programs': return <Programs />;
-      case 'Home':
-      default: return (
-        <Hero
-          onExplore={() => setActiveNav('Science Route')}
-          onPrograms={() => setActiveNav('Programs')}
-          onKnowledgeHub={() => setActiveNav('Knowledge Hub')} // Thêm hàm này để truyền vào GlassCard
-        />
-      );
->>>>>>> 37ff6d1b20c5679f6308a34f3607ae18cd422e5c
     }
   };
 
@@ -60,10 +45,7 @@ export default function App() {
           src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=2073"
           alt="Sea Background"
           className="w-full h-full object-cover"
-<<<<<<< HEAD
-=======
           referrerPolicy="no-referrer"
->>>>>>> 37ff6d1b20c5679f6308a34f3607ae18cd422e5c
         />
 
         {/* Animated Atmosphere */}
@@ -72,27 +54,17 @@ export default function App() {
           transition={{ duration: 10, repeat: Infinity }}
           className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-400/20 blur-[120px] rounded-full pointer-events-none"
         />
-<<<<<<< HEAD
-      </div>
+      </div >
 
       {/* LOGIC IF-ELSE: Navbar chỉ render khi showNavbar là true */}
-      {showNavbar && (
-        <Navbar activeNav={activeNav} setActiveNav={setActiveNav} />
-      )}
+      {
+        showNavbar && (
+          <Navbar activeNav={activeNav} setActiveNav={setActiveNav} />
+        )
+      }
 
       {/* Main Content Area */}
-=======
-        <motion.div
-          animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2], x: [0, -40, 0], y: [0, 60, 0] }}
-          transition={{ duration: 15, repeat: Infinity, delay: 2 }}
-          className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-teal-400/10 blur-[150px] rounded-full pointer-events-none"
-        />
-      </div>
 
-      <Navbar activeNav={activeNav} setActiveNav={setActiveNav} />
-
-      {/* Main Content Area - Đã bỏ lưới Grid, trả lại w-full cho các component tự quản lý */}
->>>>>>> 37ff6d1b20c5679f6308a34f3607ae18cd422e5c
       <main className="relative z-10 pt-32 px-6 max-w-7xl mx-auto min-h-screen flex flex-col justify-center pb-24">
         <AnimatePresence mode="wait">
           <motion.div
@@ -109,6 +81,6 @@ export default function App() {
       </main>
 
       <Footer />
-    </div>
+    </div >
   );
 }
