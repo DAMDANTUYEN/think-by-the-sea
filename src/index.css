@@ -9,6 +9,24 @@
 @layer base {
   body {
     @apply font-sans;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  input, textarea, button, select {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
 
@@ -19,4 +37,17 @@
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 99px;
 }

@@ -3,7 +3,7 @@ import { Waves, Sun, Wind, Droplets } from 'lucide-react';
 import GlassCard from '../ui/GlassCard';
 
 const Widget = ({ icon: Icon, label, value, unit }) => (
-  <GlassCard className="p-4 flex items-center gap-4 min-w-[160px]">
+  <GlassCard className="p-4 flex items-center gap-3 md:gap-4 min-w-[140px] md:min-w-[160px] flex-1">
     <div className="p-2 bg-white/10 rounded-lg">
       <Icon className="w-5 h-5 text-blue-300" />
     </div>

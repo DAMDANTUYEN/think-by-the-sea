@@ -8,8 +8,9 @@ const Countdown = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
-        if (prev.secs > 0) return { ...prev, secs: prev.secs - 1 };
-        return prev;
+        let { days, hours, mins, secs } = prev;
+        if (secs > 0) { secs--; } else if (mins > 0) { mins--; secs = 59; } else if (hours > 0) { hours--; mins = 59; secs = 59; } else if (days > 0) { days--; hours = 23; mins = 59; secs = 59; } else { clearInterval(timer); return prev; }
+        return { days, hours, mins, secs };
       });
     }, 1000);
     return () => clearInterval(timer);

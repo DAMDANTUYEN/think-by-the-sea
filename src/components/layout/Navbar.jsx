@@ -61,9 +61,9 @@ const Navbar = ({ activeNav, setActiveNav }) => {
         <div className="flex lg:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white/70 hover:text-white p-2 transition-colors cursor-pointer"
+            className="text-white/70 hover:text-white p-3 transition-colors cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
@@ -76,7 +76,7 @@ const Navbar = ({ activeNav, setActiveNav }) => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute top-24 left-4 right-4 z-40 lg:hidden overflow-hidden rounded-3xl backdrop-blur-3xl bg-[#0a0f1c]/90 border border-white/10 shadow-2xl flex flex-col"
+            className="absolute top-20 left-4 right-4 z-40 lg:hidden overflow-hidden rounded-3xl backdrop-blur-3xl bg-[#0a0f1c]/90 border border-white/10 shadow-2xl flex flex-col"
           >
             <div className="flex flex-col p-4">
               {menuItems.map((item) => {

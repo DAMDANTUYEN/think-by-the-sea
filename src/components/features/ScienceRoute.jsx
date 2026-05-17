@@ -28,7 +28,7 @@ const scienceThemes = [
                 actions: [
                     { label: 'Lịch Hội thảo & Sự kiện', icon: <Calendar className="w-4 h-4" /> },
                     { label: 'Đăng ký tham dự Hội nghị', icon: <Ticket className="w-4 h-4" /> },
-                    { label: 'Gói Research Retreat', icon: <Sparkles className="w-4 h-4" /> }
+                     { label: 'Gói Research Retreat', icon: <Sparkles className="w-4 h-4" /> }
                 ],
                 location: 'Thung lũng Quy Hòa',
                 image: 'https://fxbvmbd9zkjubuwr.public.blob.vercel-storage.com/1.jpg'
@@ -382,7 +382,7 @@ const ScienceRoute = ({ setShowNavbar }) => {
                         >
 
                             {/* Phân nửa trái: Hình ảnh nghệ thuật với lớp fade mờ */}
-                            <div className="w-full md:w-[45%] h-64 md:h-auto overflow-hidden relative">
+                            <div className="w-full md:w-[45%] h-44 md:h-auto overflow-hidden relative">
                                 <img src={selectedLocation.image} className="w-full h-full object-cover" alt={selectedLocation.title} />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1c] via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-[#0a0f1c]/40" />
                             </div>
@@ -391,30 +391,30 @@ const ScienceRoute = ({ setShowNavbar }) => {
                             <div className="w-full md:w-[55%] overflow-y-auto custom-scrollbar flex flex-col relative">
                                 <button
                                     onClick={() => setSelectedLocation(null)}
-                                    className="sticky top-0 self-end m-4 mr-6 p-2 bg-black/60 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors z-20 shrink-0"
+                                    className="sticky top-0 self-end m-3 md:m-4 mr-4 md:mr-6 p-3 md:p-2 bg-black/60 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors z-20 shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center"
                                 >
-                                    <X className="text-white w-6 h-6" />
+                                    <X className="text-white w-5 h-5 md:w-6 md:h-6" />
                                 </button>
                                 <div className="px-8 md:px-14 pb-8 md:pb-14 flex flex-col">
 
                                     {/* Header Modal */}
-                                    <div className="mb-10">
+                                    <div className="mb-6 md:mb-10">
                                         <div className="flex items-center gap-2 text-blue-400 mb-3">
                                             <Target size={14} />
-                                            <span className="text-[10px] font-bold uppercase tracking-[0.3em] font-display italic">
+                                            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] font-display italic">
                                                 {selectedLocation.tagline}
                                             </span>
                                         </div>
-                                        <h3 className="text-3xl md:text-5xl font-display font-bold text-white mb-3 leading-tight tracking-tight">
+                                        <h3 className="text-xl md:text-5xl font-display font-bold text-white mb-3 leading-tight tracking-tight">
                                             {selectedLocation.fullTitle || selectedLocation.title}
                                         </h3>
-                                        <div className="flex items-center gap-2 text-white/40 text-[11px] uppercase tracking-[0.2em] font-bold">
+                                        <div className="flex items-center gap-2 text-white/40 text-[10px] md:text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em] font-bold">
                                             <MapPin size={12} className="text-blue-400" /> {selectedLocation.location}
                                         </div>
                                     </div>
 
                                     {/* Đoạn mô tả chi tiết */}
-                                    <p className="text-white/60 text-base md:text-lg font-light leading-relaxed mb-12 border-l-2 border-blue-500/30 pl-8 italic">
+                                    <p className="text-white/60 text-sm md:text-lg font-light leading-relaxed mb-8 md:mb-12 border-l-2 border-blue-500/30 pl-4 md:pl-8 italic">
                                         {selectedLocation.fullDesc}
                                     </p>
 
@@ -436,16 +436,17 @@ const ScienceRoute = ({ setShowNavbar }) => {
                                     </div>
 
                                     {/* Hệ thống nút CTA sắp xếp dọc với kích thước đồng nhất */}
-                                    <div className="flex flex-col w-full gap-4 mt-auto pt-10 border-t border-white/10">
+                                    <div className="flex flex-col w-full gap-3 md:gap-4 mt-auto pt-6 md:pt-10 border-t border-white/10">
                                         {selectedLocation.actions.map((action, idx) => (
                                             <button
                                                 key={idx}
-                                                className="w-full flex items-center justify-between px-8 py-5 bg-white/5 border border-white/10 rounded-2xl text-white text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-blue-600 hover:border-blue-500 hover:shadow-[0_0_30px_rgba(37,99,235,0.4)] transition-all group"
+                                                className="w-full flex items-center justify-between px-4 md:px-8 py-4 md:py-5 bg-white/5 border border-white/10 rounded-xl md:rounded-2xl text-white text-[10px] md:text-[11px] font-bold uppercase tracking-[0.12em] md:tracking-[0.2em] hover:bg-blue-600 hover:border-blue-500 hover:shadow-[0_0_30px_rgba(37,99,235,0.4)] transition-all group min-h-[44px]"
                                             >
-                                                <span className="flex items-center gap-4">
-                                                    {action.icon} {action.label}
+                                                <span className="flex items-center gap-3 md:gap-4 truncate">
+                                                    <span className="shrink-0">{action.icon}</span>
+                                                    <span className="truncate">{action.label}</span>
                                                 </span>
-                                                <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                                                <ArrowUpRight size={14} className="shrink-0 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                                             </button>
                                         ))}
                                     </div>

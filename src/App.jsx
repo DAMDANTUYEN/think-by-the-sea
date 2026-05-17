@@ -9,6 +9,8 @@ import Footer from './components/layout/Footer';
 import Hero from './components/features/Hero';
 import ScienceRoute from './components/features/ScienceRoute';
 import Programs from './components/features/Programs';
+import KnowledgeHub from './components/features/KnowledgeHub';
+import ScienceWeek from './components/features/ScienceWeek';
 
 export default function App() {
   const [activeNav, setActiveNav] = useState('Home');
@@ -21,7 +23,11 @@ export default function App() {
         // Truyền setShowNavbar xuống để ScienceRoute có thể điều khiển
         return <ScienceRoute setShowNavbar={setShowNavbar} />;
       case 'Programs':
-        return <Programs />;
+        return <Programs setShowNavbar={setShowNavbar} />;
+      case 'Science Week':
+        return <ScienceWeek />;
+      case 'Knowledge Hub':
+        return <KnowledgeHub />;
       case 'Home':
       default:
         return (
@@ -52,7 +58,7 @@ export default function App() {
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3], x: [0, 50, 0], y: [0, -30, 0] }}
           transition={{ duration: 10, repeat: Infinity }}
-          className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-400/20 blur-[120px] rounded-full pointer-events-none"
+          className="absolute top-1/4 left-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-blue-400/20 blur-[60px] md:blur-[120px] rounded-full pointer-events-none"
         />
       </div >
 
@@ -65,7 +71,7 @@ export default function App() {
 
       {/* Main Content Area */}
 
-      <main className="relative z-10 pt-32 px-6 max-w-7xl mx-auto min-h-screen flex flex-col justify-center pb-24">
+      <main className="relative z-10 pt-24 md:pt-32 px-4 md:px-6 max-w-7xl mx-auto min-h-screen flex flex-col pb-20 md:pb-24">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeNav}

@@ -18,28 +18,28 @@ const Hero = ({ onExplore, onPrograms, onKnowledgeHub }) => (
         <MapPin className="w-3 h-3 text-blue-400" /> QUY NHON, VIETNAM
       </div>
 
-      <h1 className="text-6xl md:text-8xl font-display font-bold text-white leading-[0.9] tracking-tighter mb-8 drop-shadow-2xl">
+      <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-bold text-white leading-[0.9] tracking-tighter mb-6 md:mb-8 drop-shadow-2xl">
         WHERE <br />
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-teal-300 drop-shadow-sm">KNOWLEDGE</span> <br />
         MEETS THE OCEAN.
       </h1>
 
-      <p className="text-xl text-white/70 max-w-lg mb-10 leading-relaxed font-light">
+      <p className="text-sm sm:text-base md:text-xl text-white/70 max-w-lg mb-8 md:mb-10 leading-relaxed font-light">
         Think by the Sea - Đồng hành cùng hành trình biến dải bờ biển Quy Nhơn thành trung tâm khoa học của Việt Nam.
         Nơi tri thức được nuôi dưỡng bởi đại dương.
       </p>
 
-      <div className="flex flex-wrap gap-4 mb-8">
+      <div className="flex flex-wrap gap-3 md:gap-4 mb-8">
         <motion.button
           whileHover={{ gap: '1.25rem' }}
           onClick={onExplore}
-          className="group flex items-center gap-3 bg-blue-600 font-display text-white px-8 py-4 rounded-2xl font-bold transition-all shadow-lg shadow-blue-600/20 cursor-pointer"
+          className="group flex items-center gap-2 md:gap-3 bg-blue-600 font-display text-white px-5 md:px-8 py-3 md:py-4 rounded-2xl font-bold transition-all shadow-lg shadow-blue-600/20 cursor-pointer text-xs md:text-sm"
         >
-          EXPLORE ROUTE <ChevronRight className="w-5 h-5 transition-all" />
+          EXPLORE ROUTE <ChevronRight className="w-4 h-4 md:w-5 md:h-5 transition-all" />
         </motion.button>
         <button
           onClick={onPrograms}
-          className="flex items-center gap-3 bg-white/5 hover:bg-white/10 text-white px-8 py-4 rounded-2xl font-bold transition-all backdrop-blur-md border border-white/10 cursor-pointer"
+          className="flex items-center gap-2 md:gap-3 bg-white/5 hover:bg-white/10 text-white px-5 md:px-8 py-3 md:py-4 rounded-2xl font-bold transition-all backdrop-blur-md border border-white/10 cursor-pointer text-xs md:text-sm"
         >
           UPCOMING PROGRAMS
         </button>
